@@ -1,5 +1,12 @@
 * Kotlin cheat sheet for white board problem solving
 
+** How to execute Kotlin code
+
+#+begin_src java
+kotlinc KotlinFileName.kt -include-runtime -d output.jar
+java -jar output.jar
+#+end_src
+
 ** Loop
 
 #+begin_src java
