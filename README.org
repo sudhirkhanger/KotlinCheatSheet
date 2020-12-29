@@ -36,3 +36,18 @@ val text = "kotlin"
 for (letter in text) { println(letter) }
 for (item in text.indices) { println(text[item]) }
 #+end_src
+
+** Print collection
+
+#+begin_src java
+collection.joinToString()
+collection.joinToString(separator = "DILIMITER")
+#+end_src
+
+* TODO length vs size
+
+* TODO break vs continue vs return
+
+* TODO IntArray - get, set, size, other common methods
+
+* TODO to the power of operator
