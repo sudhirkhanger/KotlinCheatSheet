@@ -32,6 +32,7 @@ fun main() {
 *** String can be treated as a collection
 
 #+begin_src java
-for (letter in "Kotlin") { println(letter) }
-for (item in "Kotlin".indices) { println(text[item]) }
+val text = "kotlin"
+for (letter in text) { println(letter) }
+for (item in text.indices) { println(text[item]) }
 #+end_src
