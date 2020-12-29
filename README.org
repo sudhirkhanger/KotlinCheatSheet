@@ -1,5 +1,12 @@
 * Kotlin cheat sheet for white board problem solving
 
+** How to execute Kotlin code
+
+#+begin_src java
+kotlinc KotlinFileName.kt -include-runtime -d output.jar
+java -jar output.jar
+#+end_src
+
 ** Loop
 
 #+begin_src java
@@ -80,10 +87,49 @@ arr[index] = value
 
 * Notes
 
- - Arrays or class Array in Kotlin has a fixed size. It can't be resized after initialization.
+ - Arrays (Array<T>) in Kotlin has a fixed size. It can't be resized after initialization.
  - Collection which includes list, set, and map are resizeable.
- - Array and collection store boxed types whereas there are classes like IntArray, ByteArray, etc. for storing primitive types without boxing.
+ - IntArray stores primitive and unboxed items. Array<Int> and collection stores boxed types.
 
-* TODO break vs continue vs return
+* To-the-power-of operator
 
-* TODO to the power of operator
+** Manual
+
+#+begin_src java
+fun pow(base: Int, exponent: Int): Long {
+    var result: Long = 1
+
+    while (exponent != 0) {
+        result *= base.toLong()
+        --exponent
+    }
+
+    return result
+}
+#+end_src
+
+** pow() from Math class
+
+#+begin_src java
+Math.pow(base.toDouble(), exponent.toDouble())
+#+end_src
+
+* Pre and post increment
+
+#+begin_src java
+++a increments and then returns the variable
+a++ returns and then increments the variable
+var a = 1
+println(a++); //You will see 1
+//Now a is 2
+println(++a); //You will see 3
+#+end_src
+
+* Structural Jump Expressions (return, break, and continue)
+
+ - return
+   - returns from the nearest enclosing function or anonymous function
+ - break
+   - terminates the nearest enclosing loop
+ - continue
+   - skip remaining and continue with next step or proceeds to the next step of the nearest enclosing loop
