@@ -37,6 +37,12 @@ for (letter in text) { println(letter) }
 for (item in text.indices) { println(text[item]) }
 #+end_src
 
+*** Length
+
+#+begin_src java
+text.length
+#+end_src
+
 ** Print collection
 
 #+begin_src java
@@ -44,10 +50,40 @@ collection.joinToString()
 collection.joinToString(separator = "DILIMITER")
 #+end_src
 
-* TODO length vs size
+** Basic Types
+
+#+begin_src java
+val a: Int = 10000
+val d: Double = 100.00
+val f: Float = 100.00f
+val l: Long = 1000000004
+val l = 1L
+val letter: Char = 'A' 
+val b: Boolean = true
+val s: String = "hello"
+#+end_src
+
+** IntArray
+
+ - Arrays of primitive types without boxing overhead
+ - no inheritance relation to the Array class but same set of methods and properties
+
+#+begin_src java
+val x: IntArray = intArrayOf(1, 2, 3)
+val arr = IntArray(5) // [0, 0, 0, 0, 0]
+val arr = IntArray(5) { 42 } // [42, 42, 42, 42, 42]
+var arr = IntArray(5) { it * 1 } // [0, 1, 2, 3, 4]
+
+x.size // size property
+arr[index] = value
+#+end_src
+
+* Notes
+
+ - Arrays or class Array in Kotlin has a fixed size. It can't be resized after initialization.
+ - Collection which includes list, set, and map are resizeable.
+ - Array and collection store boxed types whereas there are classes like IntArray, ByteArray, etc. for storing primitive types without boxing.
 
 * TODO break vs continue vs return
-
-* TODO IntArray - get, set, size, other common methods
 
 * TODO to the power of operator
