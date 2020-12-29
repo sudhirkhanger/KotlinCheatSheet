@@ -1,1 +1,28 @@
 * Kotlin cheat sheet for white board problem solving
+
+** Loop
+
+#+begin_src java
+for (item in collection) { print(item) }
+for (i in 1..5) print(i) = 12345
+for (i in 5..1) print(i) = 
+for (i in 5 downTo 1) print(i) = 54321
+for (i in 1..4 step 2) print(i) = 135
+for (i in 4 downTo 1 step 2) print(i) = 531
+for (i in array.indices) { println(array[i]) }
+for ((index, element) in array.withIndex()) { println("index = $index, element = $element") }
+simpleArray.forEach { element -> println(element) }
+simpleArray.forEachIndexed{index, element -> println("index = $index, element = $element") }
+#+end_src
+
+** Main Method
+
+#+begin_src java
+fun main(args: Array<String>) {
+    // body
+}
+
+fun main() {
+    // body
+}
+#+end_src
