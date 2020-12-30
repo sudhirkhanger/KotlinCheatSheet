@@ -127,9 +127,6 @@ println(++a); //You will see 3
 
 * Structural Jump Expressions (return, break, and continue)
 
- - return
-   - returns from the nearest enclosing function or anonymous function
- - break
-   - terminates the nearest enclosing loop
- - continue
-   - skip remaining and continue with next step or proceeds to the next step of the nearest enclosing loop
+ - return - returns from the nearest enclosing function or anonymous function
+ - break - terminates the nearest enclosing loop
+ - continue - skip remaining and continue with next step or proceeds to the next step of the nearest enclosing loop
