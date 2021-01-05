@@ -12,6 +12,7 @@ java -jar output.jar
 #+begin_src java
 for (item in collection) { print(item) }
 for (i in 1..5) print(i) = 12345
+for (i in 1 until 5) { print(i) } = 1234
 for (i in 5..1) print(i) = 
 for (i in 5 downTo 1) print(i) = 54321
 for (i in 1..4 step 2) print(i) = 135
