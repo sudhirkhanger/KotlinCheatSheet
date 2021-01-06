@@ -84,6 +84,7 @@ var arr = IntArray(5) { it * 1 } // [0, 1, 2, 3, 4]
 
 x.size // size property
 arr[index] = value
+fun IntArray.sortedArray(): IntArray // stable sorting
 #+end_src
 
 * Notes
@@ -91,7 +92,7 @@ arr[index] = value
  - Arrays (Array<T>) in Kotlin has a fixed size. It can't be resized after initialization.
  - Collection which includes list, set, and map are resizeable.
  - IntArray stores primitive and unboxed items. Array<Int> and collection stores boxed types.
-
+   
 * To-the-power-of operator
 
 ** Manual
