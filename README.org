@@ -138,7 +138,8 @@ println(++a); //You will see 3
  - Stores key-value pairs. Keys are unique.
 
 #+begin_src java
-val numbersMap = mapOf("key1" to 1, "key2" to 2, "key3" to 3, "key4" to 1) // creates an immutable map without write operations
+// creates an immutable map without write operations
+val numbersMap = mapOf("key1" to 1, "key2" to 2, "key3" to 3, "key4" to 1)
 
 println(items.get("coins"))
 println(items["coins"])
@@ -159,7 +160,8 @@ println("Values:" + numbersMap.values) // Values:[1, 2, 3, 1]
  - MutableMap - map with write operation
 
 #+begin_src java
-val numbersMap = mutableMapOf("key1" to 1, "key2" to 2, "key3" to 3) // creates an immutable map without write operations
+// creates an immutable map without write operations
+val numbersMap = mutableMapOf("key1" to 1, "key2" to 2, "key3" to 3)
 numbersMap.put("key4", 1)
 numbersMap["key4"] = 1
 numbersMap.remove("key1") // remove a pair
@@ -181,4 +183,3 @@ numbersMap.count
 items.count { it.value > 10 } // count values greater than 10
 numbersMap.isEmpty() // check if it is empty
 #+end_src
-
