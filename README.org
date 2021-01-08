@@ -132,3 +132,53 @@ println(++a); //You will see 3
  - return - returns from the nearest enclosing function or anonymous function
  - break - terminates the nearest enclosing loop
  - continue - skip remaining and continue with next step or proceeds to the next step of the nearest enclosing loop
+
+* Map<K, V>
+ - Doesn't inherit Collection interface but is Kotlin Collection type.
+ - Stores key-value pairs. Keys are unique.
+
+#+begin_src java
+val numbersMap = mapOf("key1" to 1, "key2" to 2, "key3" to 3, "key4" to 1) // creates an immutable map without write operations
+
+println(items.get("coins"))
+println(items["coins"])
+
+println("${numbersMap.keys}") // [key1, key2, key3, key4]
+println("${numbersMap.values}") // [1, 2, 3, 1]
+
+if ("key2" in numbersMap) // return true if key2 is found
+if (1 in numbersMap.values) // returns true if value 1 is in the map
+if (numbersMap.containsKey(key)) // same as previous
+if (numbersMap.containsValue(1)) // same as previous
+for ((k, v) in numbersMap) // returns the pair if found
+println("Entries: " + numbersMap.entries) // Entries: [key1=1, key2=2, key3=3, keys4=1]
+println("Keys:" + numbersMap.keys) // Keys:[key1, key2, key3, key4]
+println("Values:" + numbersMap.values) // Values:[1, 2, 3, 1]
+#+end_src
+
+ - MutableMap - map with write operation
+
+#+begin_src java
+val numbersMap = mutableMapOf("key1" to 1, "key2" to 2, "key3" to 3) // creates an immutable map without write operations
+numbersMap.put("key4", 1)
+numbersMap["key4"] = 1
+numbersMap.remove("key1") // remove a pair
+numbersMap.clear() // remove all pair
+#+end_src
+
+ - Default implementation is LinkedHashMap which preserves insertion order
+ - HashMap - doesn't say anything about the order
+
+#+begin_src java
+val numbersMap = HashMap<String, Int>()
+items["A"] = 90
+#+end_src
+
+ - size
+
+#+begin_src java
+numbersMap.count
+items.count { it.value > 10 } // count values greater than 10
+numbersMap.isEmpty() // check if it is empty
+#+end_src
+
