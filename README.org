@@ -51,6 +51,13 @@ for (item in text.indices) { println(text[item]) }
 text.length
 #+end_src
 
+*** Substring
+
+#+begin_src java
+fun String.substring(startIndex: Int): String
+fun String.substring(startIndex: Int, endIndex: Int): String // exclusive of endIndex
+#+end_src
+
 ** Print collection
 
 #+begin_src java
@@ -89,9 +96,8 @@ fun IntArray.sortedArray(): IntArray // stable sorting
 
 * Notes
 
- - Arrays (Array<T>) in Kotlin has a fixed size. It can't be resized after initialization.
- - Collection which includes list, set, and map are resizeable.
- - IntArray stores primitive and unboxed items. Array<Int> and collection stores boxed types.
+- Collection which includes list, set, and map are resizeable.
+- IntArray stores primitive and unboxed items. Array<Int> and collection stores boxed types.
    
 * To-the-power-of operator
 
@@ -184,3 +190,24 @@ numbersMap.count
 items.count { it.value > 10 } // count values greater than 10
 numbersMap.isEmpty() // check if it is empty
 #+end_src
+
+* Array
+
+- Arrays (Array<T>) in Kotlin has a fixed size. It can't be resized after initialization.
+
+#+begin_src java
+// Initialize
+val arr = arrayOf(1, 2, 3) // [1, 2, 3]
+val arr = Array(3) {index -> index} // [1, 2, 3]
+// Length
+val size = arr.size
+// Getter
+val num = arr[0]
+// Setter
+arr[0] = 5
+// Print
+println(arr.joinToString(separator = "; ")) // 1; 2; 3
+println(arr.contentToString()) // [1, 2, 3]
+#+end_src
+
+
