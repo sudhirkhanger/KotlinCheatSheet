@@ -140,8 +140,11 @@ println(++a); //You will see 3
  - continue - skip remaining and continue with next step or proceeds to the next step of the nearest enclosing loop
 
 * Map<K, V>
- - Doesn't inherit Collection interface but is Kotlin Collection type.
- - Stores key-value pairs. Keys are unique.
+
+- Doesn't inherit Collection interface but is Kotlin Collection type.
+- Stores key-value pairs. Keys are unique.
+
+** Map (immutable)
 
 #+begin_src java
 // creates an immutable map without write operations
@@ -164,7 +167,7 @@ println("Keys:" + numbersMap.keys) // Keys:[key1, key2, key3, key4]
 println("Values:" + numbersMap.values) // Values:[1, 2, 3, 1]
 #+end_src
 
- - MutableMap - map with write operation
+** MutableMap (Mutable or with write operation)
 
 #+begin_src java
 // creates an immutable map without write operations
@@ -175,15 +178,17 @@ numbersMap.remove("key1") // remove a pair
 numbersMap.clear() // remove all pair
 #+end_src
 
- - Default implementation is LinkedHashMap which preserves insertion order
- - HashMap - doesn't say anything about the order
+** HashMap
+
+- Default implementation is LinkedHashMap which preserves insertion order
+- HashMap - doesn't say anything about the order
 
 #+begin_src java
 val numbersMap = HashMap<String, Int>()
 items["A"] = 90
 #+end_src
 
- - size
+** Size operations
 
 #+begin_src java
 numbersMap.count
