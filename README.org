@@ -215,4 +215,15 @@ println(arr.joinToString(separator = "; ")) // 1; 2; 3
 println(arr.contentToString()) // [1, 2, 3]
 #+end_src
 
+* Scope functions
 
+| Function | Object reference | Return value   | is extension function                       |
+|----------+------------------+----------------+---------------------------------------------|
+| let      | it               | lambda result  | yes                                         |
+| run      | this             | lambda result  | yes                                         |
+| run      | -                | lambda result  | No: called without the context object       |
+| with     | this             | Lambda result  | No: takes the context object as an argument |
+| apply    | this             | Context object | Yes                                         |
+| also     | it               | Context object | Yes                                         |
+
+[[https://proandroiddev.com/dont-abuse-kotlin-s-scope-functions-6a7480fc3ce9][Don’t abuse Kotlin’s scope functions]]
