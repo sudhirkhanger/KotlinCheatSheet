@@ -139,6 +139,16 @@ println(++a); //You will see 3
  - break - terminates the nearest enclosing loop
  - continue - skip remaining and continue with next step or proceeds to the next step of the nearest enclosing loop
 
+#+begin_src java
+here@ for (i in 1..5) {
+    for (j in 1..4) {
+        if (i == 3 || j == 2)
+            continue@here
+        println("i = $i; j = $j")
+    }
+}
+#+end_src
+
 * Map<K, V>
 
 - Doesn't inherit Collection interface but is Kotlin Collection type.
